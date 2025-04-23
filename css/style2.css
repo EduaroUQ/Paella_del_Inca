@@ -1,0 +1,114 @@
+@font-face {
+    font-family: "Elegante";
+    src: url(../font/Sakitu\ Baelah\ Clean.ttf);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+header{
+    position: relative;
+    background-color:rgba(16, 33, 49);
+    width: 100%;
+    height: 160px;
+}
+header img{
+    position: absolute;
+    height: 160px;
+    width: 160px;
+    left: 45%;
+}
+ul{
+    list-style: none;
+}
+
+nav{
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   background-color:rgba(16, 33, 49, 0.49);
+   height: 60px;
+   justify-content: center;
+   position: sticky;
+   font-size: 40px;
+   font-family: Elegante;
+   z-index: 20;
+   top:0;
+   
+}
+
+.nav li a{
+    color:azure;
+    text-decoration: none;
+    padding: 10px 15px;
+    display:block;
+    padding-left: 47px;
+    padding-right: 40px;
+}
+.nav li a:hover{
+    background-color: darkseagreen;
+}
+.nav > li {
+    float:left;
+}
+.nav li ul{
+    display: none;
+    position: absolute;
+    min-width: 150px;
+}
+.nav li:hover > ul{
+    display:block;
+}
+.nav li ul li{
+    position:relative;
+    background-color:rgba(16, 33, 49, 0.49);    
+}
+
+.section1{
+    position: relative;
+    border: 1px solid black;
+    height: 500px;
+}
+.section1 span{
+    display: inline-block;
+    margin-top: 10%;
+    margin-left: 13%;
+    border: 1px solid black;
+    text-align: center;
+    width: 500px;
+}
+.section1 img{
+    display: inline-block;
+    position: absolute;
+    height: 360px;
+    width: 560px;
+    right: 10%;
+    top: 10%;
+}
+/* Sección 2 */
+.section2{
+    position: relative;
+    border: 1px solid black;
+    height: 600px;
+ 
+}
+.section2 img{
+    height: 500px;
+    width: 100%;
+    position: absolute;
+    z-index: -2;
+    
+}
+.section2 span{
+    display: inline-block;
+    margin-top: 12%;
+    margin-left: 33%;
+    border: 1px solid black;
+    text-align: center;
+    width: 500px;
+    font-size: 20px;
+    color: aqua;
+}
