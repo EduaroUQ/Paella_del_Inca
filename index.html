@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Paella del Inca</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
     <div class="contenedor">
@@ -13,6 +14,8 @@
         </header>
         <nav>
             <ul class="nav">
+                <div class="icon">
+                    <i class="fa fa-bars" style="font-size: 24px"></i></div>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="nosotros.html">Nosotros</a></li>
                 <li><a href="#">Restaurantes</a>
@@ -30,7 +33,7 @@
             <div class="content1">
             <h1>Descubre el buen sabor</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio inventore explicabo error officia iusto earum quia animi labore impedit, autem ea, ullam molestias dolore maiores id dolorem in porro enim.</p>
-            <a href="#">Nuestra comida</a>
+            <a href="#">Reserva Ahora</a>
             </div>
             <img src="img/CEVICHE.jpg" alt="">
         </div>
@@ -43,11 +46,11 @@
 
     <!-- Sección 3 -->
         <div class="section3">
-            <img src="img/CEVICHE.jpg" alt="">
+            <img src="img/paella.jpg" alt="">
             <div class="content3">
             <h1>Descubre el buen sabor</h1>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta unde illum temporibus magnam eius omnis voluptates, eligendi dolore saepe! Omnis, autem. Perferendis quod minus expedita neque quo eius porro iure?</p>
-            <a href="#">Nuestra comida</a>
+            <a href="#">Reserva Ahora</a>
             </div>
         </div>
     
@@ -79,20 +82,34 @@
     
     <!-- Footer -->
         <div class="footer">
-            <div class="nosotros">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus vitae quasi quaerat ipsa autem repudiandae ratione, vel asperiores?<br> HOLA</p>
+            <div class="foot1">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus vitae quasi quaerat ipsa autem repudiandae ratione, vel asperiores?</p>
             </div>
-            <div class="seguir">
+            <div class="foot2">
                 <p>Facebook<br>Instagram<br>TikTok</p>
             </div>
-            <div class="ubicacion">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa fugit.</p>
+            <div class="foot3">
                 <p>Ubicación: Calle Siempre Viva<br>
                 Teléfono: 999888777<br>
-                Correo: aprobados@gmail.com</p>
+                Correo: aprobados@gmail.com<br>
+                Whatsapp: 987654321</p>
             </div>
         </div>
-
+        <script>
+            // Icono del menu. Vamos a darle funcionalidad para hacer que se oculte o parezca según el tamaño de la ventana
+            $(function(){
+                // Captura el evento para mostrar u ocultar el menú
+            $(".icon").click(function(){
+                $("li").toggle();
+            });
+            $(window).resize(function(){
+                var anchura = $(this).width();
+                if(anchura>576){
+                    $("li").show();
+                }
+            });
+            });
+         </script>
     </div>
 </body>
 </html>
