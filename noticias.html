@@ -13,7 +13,10 @@
             <img src="img/header.jpg" alt="cabecera">
         </header>
         <nav>
-            <ul class="nav">
+            <div class="menu-toggle" id="menu-toggle">
+                ☰
+            </div>
+            <ul class="nav" id="nav">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="nosotros.html">Nosotros</a></li>
                 <li><a href="#">Restaurantes</a>
@@ -61,7 +64,7 @@
                 Velit aspernatur eum explicabo sed aut tempora itaque voluptatem quis laborum cumque in nam culpa quia quas, voluptatum quam nostrum quaerat nesciunt. Iure earum aut, totam hic rem rerum asperiores?</p>
             </div>
             <div class="not_bloq6">
-                <video controls poster="" src="multimedia/Inauguración del Restaurante.mp4"></video>
+                <video src="multimedia/Inauguración del Restaurante.mp4" controls></video>
             </div>
         </div>
     </div>
@@ -80,5 +83,13 @@
             Whatsapp: 987654321</p>
         </div>
     </div>
+    <script>
+        const toggle = document.getElementById("menu-toggle");
+        const nav = document.getElementById("nav");
+    
+        toggle.addEventListener("click", () => {
+            nav.classList.toggle("show");
+        });
+    </script>
 </body>
 </html>

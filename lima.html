@@ -13,7 +13,10 @@
             <img src="img/header.jpg" alt="cabecera">
         </header>
         <nav>
-            <ul class="nav">
+            <div class="menu-toggle" id="menu-toggle">
+                ☰
+            </div>
+            <ul class="nav" id="nav">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="nosotros.html">Nosotros</a></li>
                 <li><a href="#">Restaurantes</a>
@@ -69,5 +72,13 @@
             Whatsapp: 987654321</p>
         </div>
     </div>
+    <script>
+        const toggle = document.getElementById("menu-toggle");
+        const nav = document.getElementById("nav");
+    
+        toggle.addEventListener("click", () => {
+            nav.classList.toggle("show");
+        });
+    </script>
 </body>
 </html>

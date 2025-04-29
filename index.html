@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Paella del Inca</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/_de397e16-fe7f-49be-9c39-fdefdd9cb76f.jpg" type="image/x-icon">
 </head>
 <body>
     <div class="contenedor">
@@ -12,10 +13,13 @@
             <img src="img/header.jpg" alt="cabecera">
         </header>
         <nav>
-            <ul class="nav">
+            <div class="menu-toggle" id="menu-toggle">
+                ☰
+            </div>
+            <ul class="nav" id="nav">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="#">Restaurantes</a>
+                <li><a href="">Restaurantes</a>
                     <ul>
                         <li><a href="madrid.html">Madrid</a></li>
                         <li><a href="lima.html">Lima</a></li>
@@ -77,22 +81,29 @@
             </div>
         </div>
     
-    <!-- Footer -->
-        <div class="footer">
-            <div class="nosotros">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus vitae quasi quaerat ipsa autem repudiandae ratione, vel asperiores?<br> HOLA</p>
-            </div>
-            <div class="seguir">
-                <p>Facebook<br>Instagram<br>TikTok</p>
-            </div>
-            <div class="ubicacion">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa fugit.</p>
-                <p>Ubicación: Calle Siempre Viva<br>
-                Teléfono: 999888777<br>
-                Correo: aprobados@gmail.com</p>
-            </div>
+      <!-- Footer -->
+      <div class="footer">
+        <div class="foot1">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus vitae quasi quaerat ipsa autem repudiandae ratione, vel asperiores?</p>
         </div>
-
+        <div class="foot2">
+            <p>Facebook<br>Instagram<br>TikTok</p>
+        </div>
+        <div class="foot3">
+            <p>Ubicación: Calle Siempre Viva<br>
+            Teléfono: 999888777<br>
+            Correo: <a href="mailto:aprobados@gmail.com">aprobados@gmail.com</a><br>
+            Whatsapp: 987654321</p>
+        </div>
+        </div>
     </div>
+    <script>
+        const toggle = document.getElementById("menu-toggle");
+        const nav = document.getElementById("nav");
+    
+        toggle.addEventListener("click", () => {
+            nav.classList.toggle("show");
+        });
+    </script>
 </body>
 </html>

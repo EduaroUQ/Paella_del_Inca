@@ -51,7 +51,7 @@ nav{
 .nav li a{
     color:azure;
     text-decoration: none;
-    padding: 10px 15px;
+    padding: 8px 15px;
     display:block;
     padding-left: 47px;
     padding-right: 40px;
@@ -304,6 +304,44 @@ p {
     .lim_sec1{
         flex-direction: column;
     }
- 
+}
+.menu-toggle {
+    display: none;
+    font-size: 32px;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+}
 
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        background-color: rgba(16, 33, 49, 0.9);
+    }
+
+    .nav.show {
+        display: flex;
+    }
+
+    .nav li a {
+        padding: 15px;
+    }
+
+    .nav li ul {
+        position: static;
+    }
+
+    .nav li:hover > ul {
+        display: none;
+    }
+
+    .nav li ul {
+        display: block;
+    }
 }

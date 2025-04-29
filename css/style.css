@@ -46,7 +46,7 @@ nav{
 .nav li a{
     color:azure;
     text-decoration: none;
-    padding: 10px 15px;
+    padding: 8px 15px;
     display:block;
     padding-left: 47px;
     padding-right: 40px;
@@ -102,7 +102,7 @@ nav{
     text-decoration: none;
     color: whitesmoke;
     background-color: rgba(16, 33, 49);
-    border-radius: 5%;
+    border-radius: 10px;
     padding: 10px;
 }
 
@@ -110,8 +110,8 @@ nav{
     max-width: 560px;
     height: auto;
     flex: 1 1 300px;
-    border-radius: 10%;
-    box-shadow:0px 5px 10px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px;
 }
 
 /* Section 2 adaptada con Flexbox */
@@ -178,7 +178,7 @@ nav{
     text-decoration: none;
     color: whitesmoke;
     background-color: rgba(16, 33, 49);
-    border-radius: 5%;
+    border-radius: 10px;
     padding: 10px;
 }
 
@@ -186,7 +186,8 @@ nav{
     max-width: 560px;
     height: auto;
     flex: 1 1 300px;
-    border-radius: 10%;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px;
 }
 
 /* Sección 4 */
@@ -236,12 +237,12 @@ nav{
     display: flex;
     gap: 10px;
     justify-content: center;
-    flex-wrap: wrap; /* Hace que los elementos se ajusten automáticamente en pantallas pequeñas */
+    flex-wrap: wrap; 
     
 }
 
 .madrid, .lima {
-    flex: 1 1 500px; /* Ajusta el tamaño mínimo y máximo de los elementos */
+    flex: 1 1 500px; 
     max-width: 500px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 20px;
@@ -272,20 +273,109 @@ nav{
     padding: 10px;
 }
 
-/* Media Queries */
+/* Página de nosotros */
+.nosotros_section2, .nosotros_section3{
+    text-align: center;
+    padding: 20px ;
+    background-color:whitesmoke;
+}
+.nosotros_section2>h1, .nosotros_section3>h1{
+    font-size: 50px;
+    font-family: h1;
+    margin: 30px;
+}
+.equipo, .opiniones{
+    display: flex;
+    gap: 20px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.equipo img, .opiniones img{
+    width: 250px;
+    height: auto;
+    flex: 1 1 300px;
+}
+.opiniones img{
+    width: 100px;
+    flex: 1 1 300px;
+}
+.opiniones-section{
+    width: 250px;
+    margin: 20px 0px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Página contacto */
+.formulario, iframe{
+    flex: unset;
+    max-width: 90%;
+    align-items: center;
+}
+
+.contacto{
+    margin: 40px 0px;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.formulario{
+    text-align: center;
+    width: 500px;
+    font-size: 20px;
+    background-color: rgba(16, 33, 49, 0.456)
+}
+.formulario h1{
+    padding: 20px 0px;
+    color: rgba(16, 33, 49);
+    font-size: 40px;
+    font-family: h1;
+}
+input[type="text"], input[type="email"], input[type="number"], input[list="ciudad"]{
+    text-align: center;
+    font-size: 15px;
+    width: 50%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: whitesmoke;
+}
+textarea[name="comentario"]{
+    background-color: whitesmoke;
+}
+.input-formulario{
+    margin-bottom: 15px;
+}
+/* Footer */
+.footer {
+    display: flex;
+    gap: 20px; 
+    justify-content: space-evenly; 
+    flex-wrap: wrap; 
+    padding: 20px;
+    background-color: rgba(16, 33, 49);
+    text-align: center;
+    color: white;
+}
+
+.foot1, .foot2, .foot3{
+    flex: 1 1 200px; 
+    max-width: 300px; 
+    padding: 10px;
+}
+
 @media (max-width: 768px) {
     .content5 {
-        flex-direction: column; /* Cambia la dirección a columna en pantallas pequeñas */
+        flex-direction: column;
         align-items: center;
     }
 
     .madrid, .lima {
-        flex: unset; /* Se elimina la regla flex específica */
-        max-width: 90%; /* Ajusta el ancho máximo para celulares */
+        flex: unset; 
+        max-width: 90%; 
     }
 }
-
-
 
 @media screen and (max-width: 1024px) {
     .content1,
@@ -314,7 +404,9 @@ nav{
         left: 50%;
         transform: translateX(-50%);
     }
-
+    .section1{
+        padding-top: 0px;
+    }
     .section1,
     .section2, .section3, .section4 {
         flex-direction: column;
@@ -326,55 +418,55 @@ nav{
     }
 }
 
-.footer {
-    display: flex;
-    gap: 20px; /* Espacio entre las secciones */
-    justify-content: space-evenly; /* Distribuye uniformemente el espacio entre los elementos */
-    flex-wrap: wrap; /* Hace que los elementos se ajusten automáticamente en pantallas pequeñas */
-    padding: 20px;
-    background-color: rgba(16, 33, 49); /* Fondo opcional */
-    text-align: center;
-    color: white;
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .foot1, .foot2, .foot3 {
+        max-width: 90%; 
+        flex: unset; 
+    }
 }
 
-.nosotros, .seguir, .ubicacion {
-    flex: 1 1 200px; /* Ajusta el tamaño base y permite que se expandan o encogen según el espacio disponible */
-    max-width: 300px; /* Ancho máximo de cada sección */
+.menu-toggle {
+    display: none;
+    font-size: 32px;
+    color: white;
+    cursor: pointer;
     padding: 10px;
 }
 
-/* Media Queries para pantallas pequeñas */
-@media (max-width: 768px) {
-    .footer {
-        flex-direction: column; /* Apila los elementos en una columna */
-        align-items: center; /* Centra los elementos */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
     }
 
-    .nosotros, .seguir, .ubicacion {
-        max-width: 90%; /* Ajusta el ancho máximo para celulares */
-        flex: unset; /* Elimina las reglas flexibles específicas */
+    .nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        background-color: rgba(16, 33, 49, 0.9);
     }
-}
 
-.nosotros_section2{
-    text-align: center;
-    padding: 20px ;
-    background-color:whitesmoke;
-}
-.nosotros_section2>h1{
-    font-size: 50px;
-    font-family: h1;
-    margin: 30px;
-}
-.equipo{
-    /* margin: 40px 0px; */
-    display: flex;
-    gap: 80px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-.equipo img{
-    width: 250px;
-    height: auto;
-    flex: 1 1 300px;
+    .nav.show {
+        display: flex;
+    }
+
+    .nav li a {
+        padding: 15px;
+    }
+
+    .nav li ul {
+        position: static;
+    }
+
+    .nav li:hover > ul {
+        display: none;
+    }
+
+    .nav li ul {
+        display: block;
+    }
 }
