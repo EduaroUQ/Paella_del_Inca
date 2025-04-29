@@ -1,0 +1,380 @@
+@font-face {
+    font-family: "Elegante";
+    src: url(../font/Sakitu\ Baelah\ Clean.ttf);
+}
+@font-face{
+    font-family: "h1";
+    src: url(../font/Elegante\ Classica.ttf);
+}
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+header{
+    position: relative;
+    background-color:rgba(16, 33, 49);
+    width: 100%;
+    height: 160px;
+}
+header img{
+    position: absolute;
+    height: 160px;
+    width: 160px;
+    left: 45%;
+}
+ul{
+    list-style: none;
+}
+
+nav{
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   background-color:rgba(16, 33, 49, 0.49);
+   height: 60px;
+   justify-content: center;
+   position: sticky;
+   font-size: 40px;
+   font-family: Elegante;
+   z-index: 20;
+   top:0;
+   
+}
+
+.nav li a{
+    color:azure;
+    text-decoration: none;
+    padding: 10px 15px;
+    display:block;
+    padding-left: 47px;
+    padding-right: 40px;
+}
+.nav li a:hover{
+    background-color: darkseagreen;
+}
+.nav > li {
+    float:left;
+}
+.nav li ul{
+    display: none;
+    position: absolute;
+    min-width: 150px;
+}
+.nav li:hover > ul{
+    display:block;
+}
+.nav li ul li{
+    position:relative;
+    background-color:rgba(16, 33, 49, 0.49);    
+}
+
+/* Section 1 adaptada con Flexbox */
+.section1 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: 70px 20px;
+    gap: 10px;
+}
+
+.content1 {
+    max-width: 500px;
+    text-align: center;
+    padding: 20px;
+    flex: 1 1 300px;
+}
+.content1 h1{
+    font-family: h1;
+    font-size: 40px;
+    padding-top: 50px;
+}
+.content1 p{
+    font-family:'Times New Roman', Times, serif;
+    font-family: 25px;
+    padding: 30px 0px;
+}
+.content1 a{
+    font-family: h1;
+    font-size: 20px;
+    text-decoration: none;
+    color: whitesmoke;
+    background-color: rgba(16, 33, 49);
+    border-radius: 5%;
+    padding: 10px;
+}
+
+.section1 img {
+    max-width: 560px;
+    height: auto;
+    flex: 1 1 300px;
+    border-radius: 10%;
+    box-shadow:0px 5px 10px;
+}
+
+/* Section 2 adaptada con Flexbox */
+.section2 {
+    height: 500px; 
+    background-image: url(../img/banner1.jpg);
+    background-attachment: fixed; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+  }
+
+.section2:before {
+	content:'';
+	position: absolute;
+    top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0,0,0,0.4);
+}
+.banner h1{
+    font-size: 80px;
+    color: white;
+    position: relative;
+}
+
+/* Section 3 adaptada con Flexbox */
+.section3 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: 80px 20px;
+    gap: 20px;
+    background-color:whitesmoke;
+}
+
+.content3 {
+    max-width: 500px;
+    text-align: center;
+    padding: 20px;
+    flex: 1 1 300px;
+}
+
+.content3 h1{
+    font-family: h1;
+    font-size: 40px;
+    padding-top: 50px;
+}
+.content3 p{
+    font-family:'Times New Roman', Times, serif;
+    font-family: 25px;
+    padding: 30px 0px;
+}
+.content3 a{
+    font-family: h1;
+    font-size: 20px;
+    text-decoration: none;
+    color: whitesmoke;
+    background-color: rgba(16, 33, 49);
+    border-radius: 5%;
+    padding: 10px;
+}
+
+.section3 img {
+    max-width: 560px;
+    height: auto;
+    flex: 1 1 300px;
+    border-radius: 10%;
+}
+
+/* Sección 4 */
+.section4 {
+    height: 500px; 
+    background-image: url(../img/banner2.jpg);
+    background-attachment: fixed; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+  }
+
+.section4:before {
+	content:'';
+	position: absolute;
+    top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0,0,0,0.4);
+}
+.banner h1{
+    font-size: 80px;
+    color: white;
+    position: relative;
+}
+
+/* Sección 5 */
+.section5 {
+    text-align: center;
+    padding: 20px ;
+    background-color:whitesmoke;
+}
+.section5>h1{
+    font-size: 50px;
+    font-family: h1;
+    margin: 30px ;
+    
+}
+.content5 {
+    margin: 40px 0px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap; /* Hace que los elementos se ajusten automáticamente en pantallas pequeñas */
+    
+}
+
+.madrid, .lima {
+    flex: 1 1 500px; /* Ajusta el tamaño mínimo y máximo de los elementos */
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: auto;
+}
+
+.madrid img, .lima img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.madrid h1, .lima h1{
+    margin: 10px;
+    font-family: h1;
+}
+
+.madrid p, .lima p{
+    font-family:'Times New Roman', Times, serif;
+    font-family: 25px;
+    padding: 0 10px 30px;
+}
+.madrid a, .lima a{
+    text-decoration: none;
+    color: whitesmoke;
+    background-color: rgba(16, 33, 49);
+    border-radius: 5%;
+    padding: 10px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .content5 {
+        flex-direction: column; /* Cambia la dirección a columna en pantallas pequeñas */
+        align-items: center;
+    }
+
+    .madrid, .lima {
+        flex: unset; /* Se elimina la regla flex específica */
+        max-width: 90%; /* Ajusta el ancho máximo para celulares */
+    }
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    .content1,
+    .banner, .content3{
+        width: 80%;
+    }
+
+    .section1 img, .section3 img {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        height: auto;
+        font-size: 24px;
+    }
+
+    .nav > li {
+        float: none;
+        text-align: center;
+    }
+
+    header img {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .section1,
+    .section2, .section3, .section4 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .section2, .section4 {
+        height: 50%;
+    }
+}
+
+.footer {
+    display: flex;
+    gap: 20px; /* Espacio entre las secciones */
+    justify-content: space-evenly; /* Distribuye uniformemente el espacio entre los elementos */
+    flex-wrap: wrap; /* Hace que los elementos se ajusten automáticamente en pantallas pequeñas */
+    padding: 20px;
+    background-color: rgba(16, 33, 49); /* Fondo opcional */
+    text-align: center;
+    color: white;
+}
+
+.nosotros, .seguir, .ubicacion {
+    flex: 1 1 200px; /* Ajusta el tamaño base y permite que se expandan o encogen según el espacio disponible */
+    max-width: 300px; /* Ancho máximo de cada sección */
+    padding: 10px;
+}
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column; /* Apila los elementos en una columna */
+        align-items: center; /* Centra los elementos */
+    }
+
+    .nosotros, .seguir, .ubicacion {
+        max-width: 90%; /* Ajusta el ancho máximo para celulares */
+        flex: unset; /* Elimina las reglas flexibles específicas */
+    }
+}
+
+.nosotros_section2{
+    text-align: center;
+    padding: 20px ;
+    background-color:whitesmoke;
+}
+.nosotros_section2>h1{
+    font-size: 50px;
+    font-family: h1;
+    margin: 30px;
+}
+.equipo{
+    /* margin: 40px 0px; */
+    display: flex;
+    gap: 80px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.equipo img{
+    width: 250px;
+    height: auto;
+    flex: 1 1 300px;
+}
