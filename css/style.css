@@ -106,6 +106,10 @@ nav{
     padding: 10px;
     cursor: pointer;
 }
+.content1 a:hover, .content3 a:hover, .madrid a:hover, .lima a:hover, input[type="submit"]:hover{
+    background-color: darkseagreen;
+    color: rgba(16, 33, 49);
+}
 
 .section1 img {
     max-width: 560px;
